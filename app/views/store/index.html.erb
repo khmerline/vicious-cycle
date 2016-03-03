@@ -1,0 +1,81 @@
+<div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <legend>Welcome To Our Website!</legend>
+            <blockquote id="text-size">
+
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you want a great site, you’ve got to test. After you’ve worked on a site for even a few weeks, you can’t see it freshly anymore. You know too much. The only way to find out if it really works is to test it.</p>
+              <small class="pull-right">Darren Jensen</small>
+
+
+
+            </blockquote>
+          </div>
+          <div class="row">
+            <% @products.each do |product| %>
+            <div class="col-6 col-sm-6 col-lg-4">
+              <legend><%= product.title %></legend>
+              <%= image_tag product.image(:medium) %>
+              <p><%= sanitize(product.description) %></p>
+              <%= number_to_currency (product.price) %>
+            </div><!--/span-->
+            <% end %>
+            
+          </div><!--/row-->
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <legend>All Book </legend>
+              <% @products.each do |product|%>
+              <ul>&raquo;<%= product.title %></ul>
+              <% end %>
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+   <legend></legend>
+
+   
+      <div class="row">
+        <div class="col-md-4">
+          <legend>Viciuos Cycle</legend>
+          <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Riding in the World Heritage area with high quality bicyles. In Phonm Penh, it is easy to rent bicyles for your tour but it is hard to find a good ones. <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here, we serve you all kind of bicycles service such as Sales,Repairs,Rentals, and Phnom Penh bicyle tour with 100% satisfaction guarenteed.
+           </p>
+          
+        </div>
+        <div class="col-md-4">
+          <legend>History</legend>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oudom started the Vicious Cycle in 2008 after meeting his now brother-in-law who introduce him to recreational cycling. The team, including Mr. Bunthet -the Mechanic, -the Shop Assistant and Ms Sophy -the Muscle are all long term employees which is a testament ti the values of the business. In 2008, The Vicious Cycle was first bike shop to offer profestional bike servicing in Phnom Penh. <br>
+          "All of those remarkable landscapes will create an unforgettable memory of you and Cambodia."
+          </p>
+          
+       </div>
+        <div class="col-md-4">
+          <legend>Contact Us</legend>
+          <dl>
+            <dt>Phone:</dt>
+            <dd>+855 15 997 939</dd>
+            <dd>+855 12 457 004</dd>
+          </dl>
+          <dl>
+            <dt>Email:</dt>
+            <dd>viciouscyclecambodia@gmail.com</dd>
+            <dt>Address:</dt>
+            <dd>23Eo,St.#144 Phsar Kandal1,Phnom Penh,Cambodia(one block back from the river) </dd>
+          </dl>
+          <dl>
+            <dt>Open 7days,7.00am - 8.00pm</dt>
+          </dl>
+        </div>
+      </div>
+<hr>
+</div>
+
